@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'task-manager',
     environment: environment,
+    contentSecurityPolicy: {'connect-src':"'self' wss://*.firebaseio.com"},
+    firebase: 'https://taskmanagerapp.firebaseio.com',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
