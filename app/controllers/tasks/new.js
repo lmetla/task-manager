@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
             	title:'',
             	description: '',
             	date: ''
-            })
+            });
 
 		}
 	}
