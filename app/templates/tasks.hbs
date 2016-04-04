@@ -2,8 +2,11 @@
 <h2> Tasks </h2>
 {{#each model as |task|}}
     <div class="well">
-        <h3> {{#link-to 'tasks.edit' task.id}} {{task.title}}{{/link-to}}</h3>
+        <h3> {{#link-to 'tasks.edit' task.id}} {{task.title}}
+        {{/link-to}}</h3>
         <p> {{task.description}} </p>
-        <small> Due: {{task.date}}</small>
+        <small> Due: {{task.date}}</small><br/>
+        <button {{action 'deleteTask' task.id}} class="btn btn-danger">
+         Delete </button>
     </div>
 {{/each}}
